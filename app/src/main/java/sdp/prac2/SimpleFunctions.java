@@ -16,6 +16,27 @@ public class SimpleFunctions {
         return sum;
     }
 
+    /*Task 3 g20m5571
+    This method returns true if there are a equal number of matching ( and ) in a string and the brackets are nested correctly.
+*/
+    public static boolean Task3 (String message) {
+
+        int numLeftBracket = 0;
+        int numRightBracket = 0;
+
+        for (int i = 0; i < message.length(); i++) {
+
+            if ( message.charAt(i) == '(' ) {
+                numLeftBracket++;
+                if ( message.charAt(i) == ')' ) numRightBracket++;
+            }
+        }
+
+        if (numLeftBracket == 0 || numRightBracket == 0) return false;
+
+        return numLeftBracket == numRightBracket;
+    }
+
                                         //task 4
 /**
 
